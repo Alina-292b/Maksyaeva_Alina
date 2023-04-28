@@ -1,109 +1,67 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Практическое задание</title>
+    <title>Table</title>
   </head>
+  <style>
+    table {
+      border-collapse: collapse;
+      background-color: gray;
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 3px 5px;
+    }
+  </style>
   <body>
+    <table id="table">
+      <tr>
+        <td>1:1</td>
+        <td>2:1</td>
+        <td>3:1</td>
+        <td>4:1</td>
+        <td>5:1</td>
+      </tr>
+      <tr>
+        <td>1:2</td>
+        <td>2:2</td>
+        <td>3:2</td>
+        <td>4:2</td>
+        <td>5:2</td>
+      </tr>
+      <tr>
+        <td>1:3</td>
+        <td>2:3</td>
+        <td>3:3</td>
+        <td>4:3</td>
+        <td>5:3</td>
+      </tr>
+      <tr>
+        <td>1:4</td>
+        <td>2:4</td>
+        <td>3:4</td>
+        <td>4:4</td>
+        <td>5:4</td>
+      </tr>
+      <tr>
+        <td>1:5</td>
+        <td>2:5</td>
+        <td>3:5</td>
+        <td>4:5</td>
+        <td>5:5</td>
+      </tr>
+    </table>
+
     <script>
-      let a = 1;
-      let b = 2;
-      let c = 3;
+      const table = document.getElementById("table");
 
-      if (a < b && a < c) {
-        console.log(a);
-      } else if (b < a && b < c) {
-        console.log(b);
-      } else if (c < a && c < b) {
-        console.log(c);
+      for (let i = 0; i < table.rows.length; i++) {
+        table.rows[i].cells[i].style.backgroundColor = "red";
       }
-
-      switch (month) {
-        case 1:
-          console.log(31);
-          break;
-
-        case 2:
-          console.log(28);
-          break;
-
-        case 3:
-          console.log(30);
-          break;
-
-        case 4:
-          console.log(30);
-          break;
-
-        case 5:
-          console.log(31);
-          break;
-
-        case 6:
-          console.log(30);
-          break;
-
-        case 7:
-          console.log(31);
-          break;
-
-        case 8:
-          console.log(31);
-          break;
-
-        case 9:
-          console.log(30);
-          break;
-
-        case 10:
-          console.log(31);
-          break;
-
-        case 11:
-          console.log(31);
-          break;
-
-        case 12:
-          console.log(31);
-          break;
-
-        default:
-          break;
-      }
-
-      let num = 0.25;
-      let exp = 25;
-      let res = num;
-
-      for (let i = 1; i < exp; i++) {
-        console.log(res);
-        res = res * num;
-      }
-
-      function SayHello() {
-        alert("Привет!");
-      }
-
-      function GetRandom() {
-        return Math.random() * 99 + 1;
-      }
-
-      console.log(Math.pow(GetRandom(), 2));
-
-      function Echo(str) {
-        document.write(str);
-      }
-
-      function InvertString(str) {
-        let newStr = "";
-        for (let i = str.length - 1; i >= 0; i--) {
-          newStr += str[i];
-        }
-        return newStr;
-      }
-      console.log(InvertString("str"));
     </script>
   </body>
 </html>
