@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сам</title>
+  </head>
+  <body>
+    <div>
+      <span id="stopvideo"></span>
+      <video id="video" width=" 500">
+        <source
+          src="https://www.shutterstock.com/shutterstock/videos/1076498990/preview/stock-footage-top-down-footage-of-a-busy-corporate-office-with-tow-rows-off-businessmen-and-businesswomen-working.webm"
+        />
+      </video>
+    </div>
+
+    <button onclick="play()">Play</button>
+    <button onclick="pause()">Pause</button>
+
+    <script>
+      var myVideo = document.getElementById("video");
+      var stopvideo = document.getElementById("timer");
+
+      function play() {
+        myVideo.play();
+      }
+
+      function pause() {
+        let randomSeconds = Math.floor(Math.random() * 10);
+
+        setTimeout(() => {
+          myVideo.pause();
+        }, randomSeconds * 1000);
+      }
+    </script>
+  </body>
+</html>
